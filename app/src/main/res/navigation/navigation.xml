@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/tabLayoutFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.danil.dop_dz4_2.ui.fragment.pager.FirstFragment"
+        android:label="FirstFragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.danil.dop_dz4_2.ui.fragment.pager.SecondFragment"
+        android:label="SecondFragment" />
+    <fragment
+        android:id="@+id/tabLayoutFragment"
+        android:name="com.danil.dop_dz4_2.ui.fragment.tablayout.TabLayoutFragment"
+        android:label="TabLayoutFragment" >
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_tabLayoutFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+</navigation>
